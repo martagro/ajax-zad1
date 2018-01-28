@@ -36,7 +36,20 @@ function ajax(method, url) {
 
     httpReq.onsuccess = function (response) {
         var jsonObj = JSON.parse(response);
-        console.log(jsonObj);
+        //console.log(jsonObj);
+        var paragraf_1 = document.createElement('p');
+        var paragraf_2 = document.createElement('p');
+        var paragraf_3 = document.createElement('p');
+
+        paragraf_1.innerHTML = jsonObj.userId;
+        paragraf_2.innerHTML = jsonObj.userName;
+        paragraf_3.innerHTML = jsonObj.userURL;
+
+        document.body.appendChild(paragraf_1);
+        document.body.appendChild(paragraf_2);
+        document.body.appendChild(paragraf_3);
+
+
     }
 
     //wysyłanie żądania do serwera
